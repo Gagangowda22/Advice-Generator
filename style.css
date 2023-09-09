@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;800&display=swap");
+
+:root {
+  --lightcyan: hsl(193, 38%, 86%);
+  --neon: hsl(150, 100%, 66%);
+
+  --blue: hsl(217, 19%, 38%);
+  --darkblue: hsl(217, 19%, 24%);
+  --navyblue: hsl(218, 23%, 16%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  font-family: "Manrope", sans-serif;
+  background-color: var(--navyblue);
+}
+
+.card {
+  background-color: var(--darkblue);
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 6px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+}
+
+.card .title {
+  color: var(--neon);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+
+.card p {
+  font-weight: bold;
+  color: white;
+}
+
+.card img {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.dice {
+  position: absolute;
+  background-color: var(--neon);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 88%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dice:hover {
+  box-shadow: 0px 2px 15px var(--neon), 0px -2px 15px var(--neon);
+}
+
+.dice img {
+  width: 50%;
+}
+
+@media (max-width: 500px) {
+  .card {
+    margin: 0 1rem;
+  }
+}
